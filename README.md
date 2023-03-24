@@ -1,13 +1,3 @@
-# Sample Hardhat Project
+# Time Bandits concept
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+NFTs with 5 morph states. Those NFTs morph based on how much time (ERC20 token) they holds. To make it more fun, we add what we call the fate machine, which consists of a "random algorithm", that chooses a token ID after it is run, and this selected token gets frozen in wherever morph state it is.
