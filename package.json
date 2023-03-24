@@ -1,5 +1,5 @@
 {
-  "name": "johnny-s-time-contracts",
+  "name": "time-bandits",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,19 +8,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IsaacHS5/Johnny-s-Time-Contracts.git"
+    "url": "git+https://github.com/0xZurvan/Time-Bandits.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IsaacHS5/Johnny-s-Time-Contracts/issues"
+    "url": "https://github.com/0xZurvan/Time-Bandits/issues"
   },
-  "homepage": "https://github.com/IsaacHS5/Johnny-s-Time-Contracts#readme",
+  "homepage": "https://github.com/0xZurvan/Time-Bandits#readme",
   "devDependencies": {
     "hardhat": "^2.12.2"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.0"
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@openzeppelin/contracts": "^4.8.0",
+    "dotenv": "^16.0.3",
+    "hardhat-gas-reporter": "^1.0.9",
+    "keccak256": "^1.0.6",
+    "pip": "^0.0.1"
   }
 }

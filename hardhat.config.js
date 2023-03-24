@@ -3,7 +3,6 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
 require("@nomiclabs/hardhat-etherscan");
-require("@nomiclabs/hardhat-waffle");
 require("hardhat-gas-reporter");
 require("solidity-coverage");
 
@@ -24,7 +23,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.19",
   paths: {
     artifacts: "./src/artifacts"
   },
@@ -42,8 +41,14 @@ module.exports = {
     }
   },
   gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
+    enabled: true,
+    outputFile: "gas-reporter.txt",
+    noColors: true,
+    token: "MATIC"
+  },
+  optimizer: {
+    enabled: true,
+    runs: 1000,
   },
   /* etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,

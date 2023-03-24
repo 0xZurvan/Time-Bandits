@@ -5,13 +5,13 @@ async function main() {
   let owner;
   const timeAddr = '';
   [owner] = await ethers.getSigners();
-  const Johnny = await hre.ethers.getContractFactory("Johnny");
-  const johnny = await Johnny.deploy(
-    "Johnny", "JOHNNY", 108, 2, timeAddr,
+  const Bandits = await hre.ethers.getContractFactory("Bandits");
+  const bandits = await Bandits.deploy(
+    "Bandits", "BANDITS", 108, 2, timeAddr,
   );
 
-  await johnny.connect(owner).deployed();
-  console.log("Johnny deployed to:", johnny.address);
+  await bandits.connect(owner).deployed();
+  console.log("Bandits deployed to:", bandits.address);
   console.log("Owner address:", owner.address);
   
 
@@ -22,7 +22,7 @@ async function main() {
     let phase = 5;
   
     for(index; index <= uris.length; index++) {
-      await johnny.connect(owner).setBaseURIs(phase, uris[index]);
+      await bandits.connect(owner).setBaseURIs(phase, uris[index]);
       index++;
       phase--;
     }
@@ -30,7 +30,6 @@ async function main() {
   }
 
   setBaseURIs();
-
 
 }
 
